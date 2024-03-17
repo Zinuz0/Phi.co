@@ -42,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #fff; /* Change hyperlink color to white */
     text-decoration: none;
     font-size: 18px;
 }
