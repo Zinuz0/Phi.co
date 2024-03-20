@@ -125,13 +125,13 @@ footer {
 footer p {
     font-size: 14px;
 }
-/* Add this CSS code to your existing stylesheet */
 
 a {
-    color: #fff; /* Set the color to white */
+    color: #fff !important; /* Set the color to white */
     text-decoration: none; /* Optionally remove underline */
 }
 
 a:hover {
-    color: #ccc; /* Change color on hover */
+    color: #ccc !important; /* Change color on hover */
 }
+
