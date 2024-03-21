@@ -61,6 +61,25 @@ section h2 {
     margin-bottom: 20px;
 }
 
+#landing {
+    background-color: #000;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 24px;
+    font-style: italic;
+}
+
 #products {
     background-color: #000;
     padding-bottom: 30px; /* Add space below "Our Products" text */
@@ -114,9 +133,4 @@ a {
 
 a:hover {
     color: #ccc !important; /* Change color on hover */
-}
-
-/* Hide the cover section permanently */
-#landing {
-    display: none;
 }
