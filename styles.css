@@ -23,7 +23,10 @@ header {
     padding: 20px 0;
     opacity: 1; /* Initially set the header to be visible */
     transition: opacity 0.5s ease; /* Add transition for smooth appearance */
-    display: flex; /* Ensure the header is always visible */
+}
+
+header .container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -47,6 +50,16 @@ nav ul li a {
     font-size: 18px;
 }
 
+/* Header styles for All Products page */
+header#all-products-header {
+    background-color: #000; /* Change background color as needed */
+}
+
+/* Header styles for Product Detail page */
+header#product-detail-header {
+    background-color: #000; /* Change background color as needed */
+}
+
 /* Additional CSS styling for the search bar */
 #searchBar {
     display: none;
@@ -55,6 +68,8 @@ nav ul li a {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add padding to ensure space for header content */
+    padding: 10px;
 }
 
 #searchBar input[type="text"] {
@@ -76,3 +91,4 @@ nav ul li a {
     cursor: pointer;
     font-size: 16px;
 }
+
