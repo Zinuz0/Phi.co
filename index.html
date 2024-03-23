@@ -22,6 +22,19 @@
             </nav>
         </div>
     </header>
+      <section id="searchBar">
+        <div class="container">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+    </section>
+
+    <section id="landing">
+        <div class="container">
+            <h1>PHI</h1>
+            <p class="tagline">Your Custom Clothing Destination</p>
+        </div>
+    </section>
      <section id="landing">
         <div class="container">
             <h1>PHI</h1>
@@ -85,15 +98,18 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
+   <script>
+        // JavaScript function to toggle the visibility of the search bar
         document.getElementById('searchBtn').addEventListener('click', function() {
-            var searchTerm = prompt('Enter search term:');
-            if (searchTerm) {
-                // Perform search logic here (e.g., filter products based on the search term)
-                alert('You searched for: ' + searchTerm);
-            }
+            var searchBar = document.getElementById('searchBar');
+            searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
         });
+
+        // Placeholder function for search functionality
+        function searchProducts() {
+            // Add your search functionality here
+            alert('Search functionality will be implemented here!');
+        }
     </script>
 </body>
 </html>
