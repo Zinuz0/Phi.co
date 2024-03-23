@@ -21,7 +21,7 @@ body {
 /* Header styles */
 header {
     padding: 20px 0;
-    opacity: 0; /* Initially hide the header */
+    opacity: 1; /* Initially set the header to be visible */
     transition: opacity 0.5s ease; /* Add transition for smooth appearance */
 }
 
@@ -53,13 +53,11 @@ nav ul li a {
 /* Header styles for All Products page */
 header#all-products-header {
     background-color: #000; /* Change background color as needed */
-    opacity: 1; /* Ensure header is visible */
 }
 
 /* Header styles for Product Detail page */
 header#product-detail-header {
     background-color: #000; /* Change background color as needed */
-    opacity: 1; /* Ensure header is visible */
 }
 
 /* Additional CSS styling for the search bar */
@@ -94,90 +92,4 @@ header#product-detail-header {
     font-size: 16px;
 }
 
-main {
-    padding: 50px 0;
-}
 
-section {
-    text-align: center;
-    padding: 50px 0;
-}
-
-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#landing {
-    background-color: #000;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#landing h1 {
-    font-size: 72px;
-    margin-bottom: 20px;
-}
-
-.tagline {
-    font-size: 24px;
-    font-style: italic;
-}
-
-#products {
-    background-color: #000;
-    padding-bottom: 30px; /* Add space below "Our Products" text */
-}
-
-.product-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px; /* Add space between "Our Products" text and product row */
-}
-
-.product {
-    width: calc(33.33% - 20px); /* Adjust as needed */
-    margin-bottom: 20px;
-    background-color: #333; /* Adjust as needed */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.product h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.product p {
-    font-size: 14px;
-    color: #fff; /* Adjust as needed */
-}
-
-footer {
-    background-color: #333;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-a {
-    color: #fff !important; /* Set the color to white */
-    text-decoration: none; /* Optionally remove underline */
-}
-
-a:hover {
-    color: #ccc !important; /* Change color on hover */
-}
