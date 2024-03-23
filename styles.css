@@ -21,7 +21,7 @@ body {
 /* Header styles */
 header {
     padding: 20px 0;
-    opacity: 1; /* Initially set the header to be visible */
+    opacity: 0; /* Initially hide the header */
     transition: opacity 0.5s ease; /* Add transition for smooth appearance */
 }
 
@@ -53,42 +53,99 @@ nav ul li a {
 /* Header styles for All Products page */
 header#all-products-header {
     background-color: #000; /* Change background color as needed */
+    opacity: 1; /* Ensure header is visible */
 }
 
 /* Header styles for Product Detail page */
 header#product-detail-header {
     background-color: #000; /* Change background color as needed */
+    opacity: 1; /* Ensure header is visible */
 }
 
-/* Additional CSS styling for the search bar */
-#searchBar {
-    display: none;
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Add padding to ensure space for header content */
-    padding: 10px;
+main {
+    padding: 50px 0;
 }
 
-#searchBar input[type="text"] {
-    padding: 10px;
-    width: 200px;
-    border: none;
-    border-radius: 4px;
-    outline: none;
-    font-size: 16px;
-    margin-right: 10px;
+section {
+    text-align: center;
+    padding: 50px 0;
 }
 
-#searchBar button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
+#landing {
+    background-color: #000;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 24px;
+    font-style: italic;
+}
+
+#products {
+    background-color: #000;
+    padding-bottom: 30px; /* Add space below "Our Products" text */
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Add space between "Our Products" text and product row */
+}
+
+.product {
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    margin-bottom: 20px;
+    background-color: #333; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 14px;
+    color: #fff; /* Adjust as needed */
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+a {
+    color: #fff !important; /* Set the color to white */
+    text-decoration: none; /* Optionally remove underline */
+}
+
+a:hover {
+    color: #ccc !important; /* Change color on hover */
+}
