@@ -17,3 +17,14 @@ window.addEventListener('scroll', function() {
         cover.style.display = 'none';
     }
 });
+
+document.getElementById('searchBtn').addEventListener('click', function() {
+    var searchContainer = document.getElementById('searchContainer');
+    var body = document.body;
+
+    // Toggle the 'active' class to show/hide the search container
+    searchContainer.classList.toggle('active');
+
+    // Toggle the 'blur' class to blur/unblur the body content
+    body.classList.toggle('blur');
+});
