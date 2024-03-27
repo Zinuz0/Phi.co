@@ -149,3 +149,34 @@ a {
 a:hover {
     color: #ccc !important; /* Change color on hover */
 }
+
+/* Styles for the search bar */
+.search-container {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: top 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.search-container.active {
+    top: 50px;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
