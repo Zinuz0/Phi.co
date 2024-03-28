@@ -18,7 +18,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Event listener for the search button
 document.getElementById('searchBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
     var searchOverlay = document.getElementById('searchOverlay');
@@ -33,11 +32,10 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     // Toggle the 'blur' class to blur/unblur the body content
     body.classList.toggle('blur');
 
-    // Toggle the 'no-interaction' class to prevent/allow interaction with the body content
+    // Toggle the 'no-interaction' class to enable/disable interaction with the website
     body.classList.toggle('no-interaction');
 });
 
-// Event listener for the close button
 document.getElementById('closeBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
     var searchOverlay = document.getElementById('searchOverlay');
@@ -52,6 +50,6 @@ document.getElementById('closeBtn').addEventListener('click', function() {
     // Remove the 'blur' class to unblur the body content
     body.classList.remove('blur');
 
-    // Remove the 'no-interaction' class to allow interaction with the body content
+    // Remove the 'no-interaction' class to enable interaction with the website
     body.classList.remove('no-interaction');
 });
