@@ -167,7 +167,6 @@ body.no-interaction {
     padding: 15px; /* Increased padding */
     transition: top 0.3s ease-in-out;
     z-index: 999;
-    width: 100%; /* Make the search bar width 100% */
 }
 
 .search-container.active {
@@ -175,7 +174,7 @@ body.no-interaction {
 }
 
 .search-container input[type="text"] {
-    width: calc(100% - 40px); /* Adjust width to accommodate close button */
+    width: 400px; /* Increased width */
     padding: 10px; /* Increased padding */
     border: none;
     background-color: #333; /* Grey background color */
@@ -199,9 +198,9 @@ body.no-interaction {
 }
 
 .close-btn {
-    position: absolute; /* Change position to absolute */
+    position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
     color: white;
     cursor: pointer;
     font-size: 20px;
