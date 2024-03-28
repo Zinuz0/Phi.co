@@ -18,13 +18,34 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Event listener for the search button
 document.getElementById('searchBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
+    var searchOverlay = document.getElementById('searchOverlay');
     var body = document.body;
 
     // Toggle the 'active' class to show/hide the search container
     searchContainer.classList.toggle('active');
 
+    // Toggle the 'active' class to show/hide the search overlay
+    searchOverlay.classList.toggle('active');
+
     // Toggle the 'blur' class to blur/unblur the body content
     body.classList.toggle('blur');
+});
+
+// Event listener for the close button
+document.getElementById('closeBtn').addEventListener('click', function() {
+    var searchContainer = document.getElementById('searchContainer');
+    var searchOverlay = document.getElementById('searchOverlay');
+    var body = document.body;
+
+    // Remove the 'active' class to hide the search container
+    searchContainer.classList.remove('active');
+
+    // Remove the 'active' class to hide the search overlay
+    searchOverlay.classList.remove('active');
+
+    // Remove the 'blur' class to unblur the body content
+    body.classList.remove('blur');
 });
