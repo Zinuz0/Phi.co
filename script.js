@@ -32,6 +32,9 @@ document.getElementById('searchBtn').addEventListener('click', function() {
 
     // Toggle the 'blur' class to blur/unblur the body content
     body.classList.toggle('blur');
+
+    // Toggle the 'no-interaction' class to prevent/allow interaction with the body content
+    body.classList.toggle('no-interaction');
 });
 
 // Event listener for the close button
@@ -48,4 +51,7 @@ document.getElementById('closeBtn').addEventListener('click', function() {
 
     // Remove the 'blur' class to unblur the body content
     body.classList.remove('blur');
+
+    // Remove the 'no-interaction' class to allow interaction with the body content
+    body.classList.remove('no-interaction');
 });
