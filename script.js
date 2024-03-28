@@ -29,7 +29,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     // Toggle the 'active' class to show/hide the search overlay
     searchOverlay.classList.toggle('active');
 
-    // Toggle the 'no-interaction' class to blur/unblur the body content
+    // Toggle the 'blur' class to blur/unblur the body content
     body.classList.toggle('no-interaction');
 });
 
