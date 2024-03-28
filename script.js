@@ -30,21 +30,20 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     searchOverlay.classList.toggle('active');
 
     // Toggle the 'blur' class to blur/unblur the body content
-    body.classList.toggle('blur');
-
-    // Toggle the 'no-interaction' class to enable/disable interaction with the website
     body.classList.toggle('no-interaction');
 });
 
-document.getElementById('searchBtn').addEventListener('click', function() {
+document.getElementById('closeBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
+    var searchOverlay = document.querySelector('.search-overlay');
     var body = document.body;
 
-    // Toggle the 'active' class to show/hide the search container
-    searchContainer.classList.toggle('active');
+    // Remove the 'active' class to hide the search container
+    searchContainer.classList.remove('active');
 
-    // Toggle the 'blur' class to blur/unblur the body content
-    body.classList.toggle('blur');
+    // Remove the 'active' class to hide the search overlay
+    searchOverlay.classList.remove('active');
+
+    // Remove the 'no-interaction' class to enable interaction with the website
+    body.classList.remove('no-interaction');
 });
-
-
