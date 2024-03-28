@@ -174,8 +174,8 @@ body.no-interaction {
 }
 
 .search-container input[type="text"] {
-    width: 400px; /* Increased width */
-    padding: 10px; /* Increased padding */
+    width: 200px; /* Increased width */
+    padding: 8px; /* Increased padding */
     border: none;
     background-color: #333; /* Grey background color */
     color: #fff; /* White font color */
