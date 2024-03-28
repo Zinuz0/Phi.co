@@ -157,9 +157,11 @@ body.no-interaction {
     pointer-events: none;
 }
 
-body.blur .search-container {
-    filter: none; /* Remove blur effect on the search container */
-    pointer-events: auto; /* Enable interaction with the search container */
+/* Apply blur to elements other than the search container */
+body.blur > *:not(.search-container),
+body.no-interaction {
+    filter: blur(5px);
+    pointer-events: none;
 }
 
 .search-container {
@@ -172,6 +174,8 @@ body.blur .search-container {
     padding: 15px; /* Increased padding */
     transition: top 0.3s ease-in-out;
     z-index: 999;
+    filter: none; /* Remove blur for search container */
+    pointer-events: auto; /* Allow interaction with search container */
 }
 
 .search-container.active {
