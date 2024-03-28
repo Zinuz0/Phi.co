@@ -157,6 +157,11 @@ body.no-interaction {
     pointer-events: none;
 }
 
+body.blur .search-container {
+    filter: none; /* Remove blur effect on the search container */
+    pointer-events: auto; /* Enable interaction with the search container */
+}
+
 .search-container {
     position: fixed;
     top: -100%;
