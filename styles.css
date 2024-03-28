@@ -152,14 +152,7 @@ a:hover {
 
 /* Apply blur to elements other than the search container */
 body.blur > *:not(.search-container),
-body.no-interaction {
-    filter: blur(5px);
-    pointer-events: none;
-}
-
-/* Apply blur to elements other than the search container */
-body.blur > *:not(.search-container),
-body.no-interaction {
+body.blur {
     filter: blur(5px);
     pointer-events: none;
 }
@@ -177,6 +170,7 @@ body.no-interaction {
     filter: none; /* Remove blur for search container */
     pointer-events: auto; /* Allow interaction with search container */
 }
+
 
 .search-container.active {
     top: 50px;
