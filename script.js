@@ -47,4 +47,3 @@ document.getElementById('closeBtn').addEventListener('click', function() {
     // Remove the 'no-interaction' class to enable interaction with the website
     body.classList.remove('no-interaction');
 });
-
