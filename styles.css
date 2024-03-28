@@ -151,8 +151,8 @@ a:hover {
 }
 
 /* Apply blur to elements other than the search container */
-body.blur > *:not(.search-container),
-body.blur {
+body.no-interaction > *:not(.search-container),
+body.no-interaction {
     filter: blur(5px);
     pointer-events: none;
 }
