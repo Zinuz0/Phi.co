@@ -20,7 +20,7 @@ window.addEventListener('scroll', function() {
 
 document.getElementById('searchBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
-    var searchOverlay = document.getElementById('searchOverlay');
+    var searchOverlay = document.querySelector('.search-overlay');
     var body = document.body;
 
     // Toggle the 'active' class to show/hide the search container
@@ -38,7 +38,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
 
 document.getElementById('closeBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
-    var searchOverlay = document.getElementById('searchOverlay');
+    var searchOverlay = document.querySelector('.search-overlay');
     var body = document.body;
 
     // Remove the 'active' class to hide the search container
@@ -53,3 +53,4 @@ document.getElementById('closeBtn').addEventListener('click', function() {
     // Remove the 'no-interaction' class to enable interaction with the website
     body.classList.remove('no-interaction');
 });
+
