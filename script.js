@@ -13,6 +13,7 @@ window.addEventListener('scroll', function() {
     if (scrollPosition >= cover.clientHeight) {
         // Once the cover section disappears, set the header opacity to 1
         header.style.opacity = 1;
+
         // Hide or remove the cover section from the DOM
         cover.style.display = 'none';
     }
