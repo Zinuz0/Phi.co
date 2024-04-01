@@ -22,29 +22,19 @@ window.addEventListener('scroll', function() {
 document.getElementById('searchBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
     var searchOverlay = document.querySelector('.search-overlay');
-    var body = document.body;
+    var content = document.getElementById('content');
 
-    // Toggle the 'active' class to show/hide the search container
     searchContainer.classList.toggle('active');
-
-    // Toggle the 'active' class to show/hide the search overlay
     searchOverlay.classList.toggle('active');
-
-    // Toggle the 'blur' class to blur/unblur the body content
-    body.classList.toggle('no-interaction');
+    content.classList.toggle('hide');
 });
 
 document.getElementById('closeBtn').addEventListener('click', function() {
     var searchContainer = document.getElementById('searchContainer');
     var searchOverlay = document.querySelector('.search-overlay');
-    var body = document.body;
+    var content = document.getElementById('content');
 
-    // Remove the 'active' class to hide the search container
     searchContainer.classList.remove('active');
-
-    // Remove the 'active' class to hide the search overlay
     searchOverlay.classList.remove('active');
-
-    // Remove the 'no-interaction' class to enable interaction with the website
-    body.classList.remove('no-interaction');
+    content.classList.remove('hide');
 });
