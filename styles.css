@@ -150,16 +150,13 @@ a:hover {
     color: #ccc !important; /* Change color on hover */
 }
 
-body.no-interaction {
-    filter: blur(5px);
-    pointer-events: none;
+#content {
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Exclude search container and overlay from blur */
-body.no-interaction .search-container,
-body.no-interaction .search-overlay {
-    filter: none;
-    pointer-events: auto;
+#content.hide {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .search-container {
@@ -179,7 +176,7 @@ body.no-interaction .search-overlay {
 }
 
 .search-container input[type="text"] {
-    width: 500px;
+    width: 700px;
     padding: 8px;
     border: none;
     background-color: #333;
