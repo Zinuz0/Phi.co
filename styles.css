@@ -150,7 +150,7 @@ a:hover {
     color: #ccc !important; /* Change color on hover */
 }
 
-body.no-interaction > *:not(.search-container),
+body.no-interaction > *:not(.search-container):not(.search-overlay),
 body.no-interaction {
     filter: blur(5px);
     pointer-events: none;
