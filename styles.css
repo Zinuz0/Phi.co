@@ -172,13 +172,13 @@ a:hover {
 }
 
 .search-container.active {
-    top: 150px;
+    top: 90px;
 }
 
 .search-container input[type="text"] {
-    width: 700px;
+    width: 550px;
     padding: 8px;
-    font-size: 24px;
+    font-size: 16px;
     border: none;
     background-color: #333;
     color: #fff;
