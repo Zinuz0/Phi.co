@@ -8,55 +8,88 @@
 </head>
 <body>
 
-<header id="product-detail-header">
-    <div class="container">
-        <div class="logo">
-            <a href="index.html"><h1>PHI</h1></a> <!-- Make the logo a clickable link -->
+<header>
+        <div class="container">
+            <div class="logo">
+              <a href="index.html">
+              <img src="logo.png" alt="Website Logo">
+              </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#" id="searchBtn">Search</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    </header>
+    <div class="search-overlay" id="searchOverlay"></div>
+    <div class="search-container" id="searchContainer">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <input type="text" id="searchBar" placeholder="Search Products">
     </div>
-</header>
 
     <main>
-        <section class="product-details">
+        <section id="product-details">
             <div class="container">
-                <div class="product-content">
-                    <div class="product-image">
-                        <img src="white-placeholder.jpg" alt="White Placeholder">
+                <div class="product-images">
+                    <!-- Large image of the product -->
+                    <img src="product_large.jpg" alt="Product Image" id="productImage">
+                </div>
+                <div class="product-info">
+                    <!-- Product name -->
+                    <h2>Product Name</h2>
+                    <!-- Color options -->
+                    <div class="color-options">
+                        <label for="colorSelect">Select Color:</label>
+                        <select id="colorSelect">
+                            <option value="color1">Color 1</option>
+                            <option value="color2">Color 2</option>
+                            <!-- Add more color options as needed -->
+                        </select>
                     </div>
-                    <div class="product-info">
-                        <h2>Oversized T-Shirt</h2>
-                        <p>Description of Oversized T-Shirt</p>
-                        <h3>Size Chart</h3>
-                        <table>
-                            <tr>
-                                <th>Size</th>
-                                <th>Length</th>
-                                <th>Width</th>
-                            </tr>
-                            <tr>
-                                <td>S</td>
-                                <td>26"</td>
-                                <td>20"</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>28"</td>
-                                <td>22"</td>
-                            </tr>
-                        </table>
+                    <!-- Size options -->
+                    <div class="size-options">
+                        <label for="sizeSelect">Select Size:</label>
+                        <select id="sizeSelect">
+                            <option value="size1">Size 1</option>
+                            <option value="size2">Size 2</option>
+                            <!-- Add more size options as needed -->
+                        </select>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="related-products">
+            <div class="container">
+                <h2>Related Products</h2>
+                <div class="related-product">
+                    <!-- Related product image -->
+                    <img src="related_product1.jpg" alt="Related Product 1">
+                    <!-- Related product name -->
+                    <p>Related Product 1 Name</p>
+                </div>
+                <div class="related-product">
+                    <!-- Related product image -->
+                    <img src="related_product2.jpg" alt="Related Product 2">
+                    <!-- Related product name -->
+                    <p>Related Product 2 Name</p>
+                </div>
+                <!-- Add more related products as needed -->
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <footer>
         <div class="container">
