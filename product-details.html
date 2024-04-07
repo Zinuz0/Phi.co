@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinkmatter Spider Tee</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - PHI</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Catalogue</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Size Chart</a></li>
-      </ul>
-    </nav>
-    <div class="search-cart">
-      <div class="search">
-        <input type="text" placeholder="Search">
-        <button>Search</button>
-      </div>
-      <a href="#" class="cart">Cart</a>
+        <div class="container">
+            <div class="logo">
+              <a href="index.html">
+              <img src="logo.png" alt="Website Logo">
+              </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#" id="searchBtn">Search</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="search-overlay" id="searchOverlay"></div>
+    <div class="search-container" id="searchContainer">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <input type="text" id="searchBar" placeholder="Search Products">
     </div>
-  </header>
 
   <main>
     <section class="product-section">
       <div class="product-image">
-        <img src="pinkmatter-spider-tee.jpg" alt="Pinkmatter Spider Tee">
+        <img src="Product-1.jpg" alt="Product 1">
       </div>
       <div class="product-details">
-        <h1>PINKMATTER SPIDER TEE</h1>
+        <h1>Product-1</h1>
         <p class="price">Rs. 749.00</p>
         <p class="tax-info">Tax included.</p>
         <div class="color-options">
