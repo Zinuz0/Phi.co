@@ -1,100 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - PHI</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinkmatter Spider Tee</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-        <div class="container">
-            <div class="logo">
-              <a href="index.html">
-              <img src="logo.png" alt="Website Logo">
-              </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="#" id="searchBtn">Search</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="search-overlay" id="searchOverlay"></div>
-    <div class="search-container" id="searchContainer">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        <input type="text" id="searchBar" placeholder="Search Products">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Catalogue</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Size Chart</a></li>
+      </ul>
+    </nav>
+    <div class="search-cart">
+      <div class="search">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+      </div>
+      <a href="#" class="cart">Cart</a>
     </div>
+  </header>
 
-    <main>
-        <section id="product-details">
-            <div class="container">
-                <div class="product-images">
-                    <!-- Large image of the product -->
-                    <img src="product_large.jpg" alt="Product Image" id="productImage">
-                </div>
-                <div class="product-info">
-                    <!-- Product name -->
-                    <h2>Product Name</h2>
-                    <!-- Color options -->
-                    <div class="color-options">
-                        <label for="colorSelect">Select Color:</label>
-                        <select id="colorSelect">
-                            <option value="color1">Color 1</option>
-                            <option value="color2">Color 2</option>
-                            <!-- Add more color options as needed -->
-                        </select>
-                    </div>
-                    <!-- Size options -->
-                    <div class="size-options">
-                        <label for="sizeSelect">Select Size:</label>
-                        <select id="sizeSelect">
-                            <option value="size1">Size 1</option>
-                            <option value="size2">Size 2</option>
-                            <!-- Add more size options as needed -->
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="related-products">
-            <div class="container">
-                <h2>Related Products</h2>
-                <div class="related-product">
-                    <!-- Related product image -->
-                    <img src="related_product1.jpg" alt="Related Product 1">
-                    <!-- Related product name -->
-                    <p>Related Product 1 Name</p>
-                </div>
-                <div class="related-product">
-                    <!-- Related product image -->
-                    <img src="related_product2.jpg" alt="Related Product 2">
-                    <!-- Related product name -->
-                    <p>Related Product 2 Name</p>
-                </div>
-                <!-- Add more related products as needed -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <!-- Footer content -->
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 PHI - Custom Clothing</p>
+  <main>
+    <section class="product-section">
+      <div class="product-image">
+        <img src="pinkmatter-spider-tee.jpg" alt="Pinkmatter Spider Tee">
+      </div>
+      <div class="product-details">
+        <h1>PINKMATTER SPIDER TEE</h1>
+        <p class="price">Rs. 749.00</p>
+        <p class="tax-info">Tax included.</p>
+        <div class="color-options">
+          <h3>Color</h3>
+          <div class="color-buttons">
+            <button class="color-btn black active"></button>
+            <button class="color-btn white"></button>
+          </div>
         </div>
-    </footer>
+        <div class="size-options">
+          <h3>Size</h3>
+          <div class="size-buttons">
+            <button class="size-btn xs">XS</button>
+            <button class="size-btn s">S</button>
+            <button class="size-btn m">M</button>
+            <button class="size-btn l">L</button>
+            <button class="size-btn xl">XL</button>
+            <button class="size-btn xxl">XXL</button>
+          </div>
+        </div>
+        <div class="quantity-input">
+          <button class="quantity-btn minus">-</button>
+          <input type="number" value="1" min="1">
+          <button class="quantity-btn plus">+</button>
+        </div>
+        <div class="product-actions">
+          <button class="add-to-cart">Add to cart</button>
+          <button class="buy-now">Buy it now</button>
+        </div>
+        <div class="product-info">
+          <p>-Oversized Tee (Unisex)</p>
+          <p>-220 GSM bio-washed cotton</p>
+          <p>-Made in India</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
