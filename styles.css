@@ -216,3 +216,97 @@ a:hover {
 .logo a {
     cursor: pointer;
 }
+.product-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.product-image {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  flex-basis: 45%;
+  text-align: left;
+}
+
+.product-details h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.tax-info {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.color-options,
+.size-options,
+.quantity-input,
+.product-actions,
+.product-info {
+  margin-bottom: 20px;
+}
+
+.color-buttons,
+.size-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color-btn,
+.size-btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.color-btn.active,
+.size-btn.active {
+  background-color: #666;
+}
+
+.quantity-btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-to-cart,
+.buy-now {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-now {
+  background-color: #000;
+  margin-top: 10px;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: #ccc;
+}
