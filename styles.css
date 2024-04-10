@@ -51,15 +51,17 @@ nav ul li a {
 }
 
 /* Header styles for All Products page */
-header#all-products-header {
+#all-products-header {
     background-color: #000; /* Change background color as needed */
     opacity: 1; /* Ensure header is visible */
 }
 
 /* Header styles for Product Detail page */
-header#product-detail-header {
+#product-detail-header {
     background-color: #000; /* Change background color as needed */
     opacity: 1; /* Ensure header is visible */
+}
+
 }
 
 main {
