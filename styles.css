@@ -106,6 +106,7 @@ section h2 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    border: 1px solid #fff;
     margin-top: 20px; /* Add space between "Our Products" text and product row */
 }
 
