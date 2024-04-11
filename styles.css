@@ -106,7 +106,6 @@ section h2 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid #fff;
     margin-top: 20px; /* Add space between "Our Products" text and product row */
 }
 
@@ -115,6 +114,7 @@ section h2 {
     margin-bottom: 20px;
     background-color: #333; /* Adjust as needed */
     padding: 20px;
+    border: 1px solid #fff;
     box-sizing: border-box;
 }
 
