@@ -70,6 +70,7 @@ nav ul li a {
 
 main {
     padding: 50px 0;
+    flex-grow: 1;
 }
 
 section {
