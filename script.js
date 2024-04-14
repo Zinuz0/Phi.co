@@ -48,3 +48,31 @@ document.getElementById('closeBtn').addEventListener('click', function() {
     // Remove the 'no-interaction' class to enable interaction with the website
     body.classList.remove('no-interaction');
 });
+
+// Add the quantity input functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const quantityInput = document.querySelector('.quantity-input input');
+    const minusBtn = document.querySelector('.quantity-btn.minus');
+    const plusBtn = document.querySelector('.quantity-btn.plus');
+
+    minusBtn.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    plusBtn.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue + 1;
+    });
+
+    // Add event listener for input change
+    quantityInput.addEventListener('input', function() {
+        let currentValue = parseInt(quantityInput.value);
+        // Check if value is less than 1 or not a number
+        if (currentValue < 1 || isNaN(currentValue)) {
+            quantityInput.value = 1; // Reset value to 1
+        }
+    });
+});
