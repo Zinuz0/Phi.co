@@ -279,19 +279,44 @@ a:hover {
 
 .color-buttons,
 .size-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.color-btn,
+.color-btn {
+    padding: 16px 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 20px; /* Add this line to make the color buttons rounded */
+}
+
+.color-btn:active {
+    transform: translateY(1px); /* Add a slight translateY effect when clicked */
+    background-color: #000; /* Change background color when clicked */
+}
+
 .size-btn {
-  padding: 8px 16px;
-  border: none;
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #fff;
-  cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.size-btn:hover {
+    background-color: #555; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.size-btn:active {
+    transform: translateY(1px); /* Add a slight translateY effect when clicked */
+    background-color: #000; /* Change background color when clicked */
 }
 
 .color-btn.active,
@@ -299,24 +324,87 @@ a:hover {
   background-color: #666;
 }
 
-.quantity-btn {
-  padding: 8px 16px;
-  border: none;
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #fff;
-  cursor: pointer;
+.quantity-input {
+    display: inline-flex; /* Make it inline and flex container */
+    align-items: center; /* Align items vertically */
+    border-radius: 20px; /* Adjust border radius for rounded shape */
+    border: 1px solid #fff; /* Add border */
+    padding: 5px; /* Add padding */
 }
 
-.add-to-cart,
+.quantity-btn {
+    padding: 8px 16px;
+    border: 1px ridge #fff;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%; /* Make buttons circular */
+    margin: 0 5px; /* Add margin between buttons */
+}
+
+.quantity-btn:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.quantity-btn:active {
+    transform: translateY(1px);
+    background-color: #000;
+}
+
+.quantity-input input {
+    border: #fff;
+    outline: none;
+    background: transparent;
+    width: 60px; /* Adjust width */
+    text-align: center; /* Center align text */
+    font-size: 16px;
+    color: #fff;/* Adjust font size */
+}
+
+.add-to-cart {
+    width: 75%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+}
+
+.add-to-cart:hover {
+    background-color: #000; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.add-to-cart:active {
+  transform: translateY(1.5px);
+    background-color: #555; /* Change background color when clicked */
+}
+
+
 .buy-now {
-  width: 75%;
-  padding: 12px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #fff;
-  cursor: pointer;
+    width: 75%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+}
+
+.buy-now:hover {
+    background-color: #555; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.buy-now:active {
+    transform: translateY(2px); /* Add a slight translateY effect when clicked */
+    background-color: #000; /* Change background color when clicked */
 }
 
 .buy-now {
