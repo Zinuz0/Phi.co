@@ -121,12 +121,12 @@ section h2 {
     padding: 20px;
     border: 1px solid #fff;
     box-sizing: border-box;
-    border-radius: 10px; /* Add this line to make the edges curved */
+    border-radius: 8px; /* Add this line to make the edges curved */
     transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
 
 .product:hover {
-    transform: scale(1.1); /* Increase the scale on hover (adjust as needed) */
+    transform: scale(1.07); /* Increase the scale on hover (adjust as needed) */
 }
 
 .product img {
