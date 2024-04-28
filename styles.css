@@ -199,6 +199,13 @@ a:hover {
     background-color: #333;
     color: #fff;
     outline: none;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.search-container input[type="text"]::placeholder {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
 }
 
 .search-overlay {
