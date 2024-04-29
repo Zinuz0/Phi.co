@@ -115,6 +115,7 @@ section h2 {
     margin-right: 30px;
     justify-content: space-around;
     margin-top: 30px;/* Add space between "Our Products" text and product row */
+    margin-bottom: 1200px;
 }
 
 .product {
