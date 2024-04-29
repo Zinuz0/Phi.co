@@ -10,15 +10,15 @@ body {
     font-family: Arial, sans-serif;
     color: #fff;
     background-color: #000;
-  display: flex;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 0 20px; /* Add padding on either side */
+    padding: 0 10px; /* Add padding on either side */
     flex: 1;
 }
 
@@ -26,6 +26,8 @@ body {
 header {
     padding: 20px 0;
     opacity: 0; /* Initially hide the header */
+    margin-left: 40px; /* Space on the left side */
+    margin-right: 40px; /* Space on the right side */
     transition: opacity 0.5s ease; /* Add transition for smooth appearance */
 }
 
@@ -109,14 +111,18 @@ section h2 {
 
 .product-container {
     display: flex;
+    margin-left: 30px; /* Space on the left side */
+    margin-right: 30px;
     justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px; /* Add space between "Our Products" text and product row */
+    margin-top: 30px;/* Add space between "Our Products" text and product row */
 }
 
 .product {
-    width: calc(33.33% - 20px); /* Adjust as needed */
+    height: 200px;
+    width: 400px; /* Adjust as needed */
     margin-bottom: 20px;
+    margin-left: 10px; /* Space on the left side */
+    margin-right: 10px; /* Space on the right side */
     background-color: #333; /* Adjust as needed */
     padding: 20px;
     border: 1px solid #fff;
@@ -137,6 +143,7 @@ section h2 {
 
 .product h3 {
     font-size: 20px;
+    margin-left: 5px;
     margin-bottom: 10px;
 }
 
