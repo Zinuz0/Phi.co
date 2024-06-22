@@ -70,9 +70,57 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add event listener for input change
     quantityInput.addEventListener('input', function() {
         let currentValue = parseInt(quantityInput.value);
-        // Check if value is less than 1 or not a number
+        // Check if value is less than 1 or not a numbers
         if (currentValue < 1 || isNaN(currentValue)) {
             quantityInput.value = 1; // Reset value to 1
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navItems = document.querySelectorAll('.nav-item');
+    const subCategories = document.querySelectorAll('.sub-categories');
+
+    let hideTimeout;
+
+    navItems.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            clearTimeout(hideTimeout);
+            const category = item.getAttribute('data-category');
+            const subCategoryElement = document.getElementById(`${category}-subcategories`);
+            if (subCategoryElement) {
+                subCategories.forEach(sub => sub.classList.remove('show'));
+                subCategoryElement.classList.add('show');
+            }
+        });
+
+        item.addEventListener('mouseout', () => {
+            hideSubCategories();
+        });
+    });
+
+    subCategories.forEach(subCategory => {
+        subCategory.addEventListener('mouseover', () => {
+            clearTimeout(hideTimeout);
+            subCategory.classList.add('show');
+        });
+
+        subCategory.addEventListener('mouseout', () => {
+            hideSubCategories();
+        });
+    });
+
+    function hideSubCategories() {
+        hideTimeout = setTimeout(() => {
+            subCategories.forEach(sub => {
+                sub.classList.remove('show');
+                sub.style.opacity = '0';
+                sub.style.transform = 'translateY(-20px)';
+                setTimeout(() => {
+                    sub.style.display = 'none';
+                }, 500); // Match the transition duration
+            });
+        }, 500); // Delay to keep the menu visible longer
+    }
+});
+
