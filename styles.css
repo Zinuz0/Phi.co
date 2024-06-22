@@ -22,38 +22,151 @@ body {
     flex: 1;
 }
 
-/* Header styles */
 header {
-    padding: 14px 0;
-    opacity: 0; /* Initially hide the header */
-    margin-left: 40px; /* Space on the left side */
-    margin-right: 40px; /* Space on the right side */
+    width: 100%;
+    padding: 19px 0;
+    opacity: 0; 
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    position: fixed; /* Make the header fixed */
+    top: 0;
+    z-index: 10; /* Ensure header is above other content */
     transition: opacity 0.5s ease; /* Add transition for smooth appearance */
 }
 
-header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
-.logo h1 {
-    font-size: 1px;
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
 }
 
-nav ul {
+.header-left {
+    flex: 1;
+    padding-left: 35px;
+}
+
+.header-center {
+    flex: 1;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.header-right {
+    flex: 1;
+    justify-content: flex-end;
+    padding-right: 35px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+.nav-links, .nav-icons {
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.nav-links li {
+    margin: 0 10px;
 }
 
-nav ul li a {
-    color: #fff; /* Change hyperlink color to white */
-    text-decoration: none;
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;  
     font-size: 18px;
+    padding: 5px 9px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.17); /* Light background on hover */
+    border: 1px rgba(255, 255, 255, 0.1); /* Border around the hovered category */
+}
+
+.nav-icons {
+    justify-content: flex-end;
+}
+
+.nav-icons li {
+    margin-left: 20px;
+}
+
+.nav-icons li a {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Ensure that the header remains at the top level */
+.header-container {
+    z-index: 1000;
+}
+
+/* Sub-categories styles */
+.sub-categories {
+    display: none;
+    position: fixed;
+    top: 65px; /* Distance from the header */
+    width: 100%;
+    background-color: transparent;/* Semi-transparent background */
+    backdrop-filter: blur(15px); /* Apply blur effect */
+    padding: 30px 0;
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth effect */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Initially shifted up */
+    z-index: 900;
+}
+
+.sub-categories.show {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.sub-categories a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.sub-categories a:hover {
+    background-color: rgba(255, 255, 255, 0.17); /* Light background on hover */
+    border-radius: 5px;
+}
+
+/* Show sub-categories on hover */
+.nav-item:hover + .sub-categories,
+.sub-categories:hover {
+    display: block;
+    opacity: 1; /* Fully opaque */
+    transform: translateY(0); /* No vertical shift */
+}
+
+/* Ensure the header remains at the top */
+header {
+    z-index: 1000;
 }
 
 /* Header styles for All Products page */
