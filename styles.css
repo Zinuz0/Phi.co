@@ -31,7 +31,7 @@ header {
     position: fixed; /* Make the header fixed */
     top: 0;
     z-index: 10; /* Ensure header is above other content */
-    transition: opacity 0.5s ease; /* Add transition for smooth appearance */
+    transition: top 0.3s ease, opacity 0.3s ease; /* Add transition for smooth appearance */
 }
 
 .header-container {
@@ -190,7 +190,7 @@ main {
 
 section {
     text-align: center;
-    padding: 50px 0;
+    padding: 140px 0;
 }
 
 section h2 {
@@ -302,14 +302,14 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
-    border: 2px solid #fff;
-    padding: 15px;
+    border: 1px solid #fff;
+    padding: 12px;
     transition: top 0.3s ease-in-out;
     z-index: 999;
 }
 
 .search-container.active {
-    top: 90px;
+    top: 110px;
 }
 
 .search-container input[type="text"] {
