@@ -124,3 +124,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const subCategories = document.querySelectorAll('.sub-categories');
+
+window.addEventListener('scroll', () => {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        header.style.top = '-100px'; // Hide the header
+        header.style.opacity = '0'; // Fade out the header
+        subCategories.forEach(menu => {
+            menu.classList.remove('show'); // Hide subcategory menus
+        });
+    } else {
+        // Scrolling up
+        header.style.top = '0'; // Show the header
+        header.style.opacity = '1'; // Fade in the header
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For mobile or negative scrolling
+});
