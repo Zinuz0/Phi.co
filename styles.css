@@ -55,7 +55,7 @@ header {
 .header-center {
     flex: 1;
     justify-content: center;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 10px;
     padding: 12px;
     padding-left: 20px;
@@ -501,7 +501,7 @@ a:hover {
 }
 
 .add-to-cart:hover {
-    background-color: #000; /* Change background color on hover */
+    background-color: #000    ; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
 }
 
