@@ -3,26 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - PHI</title>
+    <title>PHI - Custom Clothing</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <header id="product-detail-header">
-      <div class="container">
-    <div class="logo">
-        <a href="index.html">
-            <img src="logo.png" alt="Website Logo">
-        </a>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Website Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li class="nav-item" data-category="trending"><a href="#">Trending</a></li>
+                        <li class="nav-item" data-category="tees"><a href="#">Tees</a></li>
+                        <li class="nav-item" data-category="croptops"><a href="#">Croptops</a></li>
+                        <li class="nav-item" data-category="pants"><a href="#">Pants</a></li>
+                        <li class="nav-item" data-category="sale"><a href="#">Sale</a></li>
+                        <li class="nav-item" data-category="create"><a href="#">Create*</a></li>
+                        <li class="nav-item" data-category="originals"><a href="#">Originals</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <ul class="nav-icons">
+                    <li><a href="#" id="searchBtn"><i class="fas fa-search"></i></a></li>
+                    <li><a href="#" id="wishlistBtn"><i class="fas fa-heart"></i></a></li>
+                    <li><a href="#" id="cartBtn"><i class="fas fa-shopping-bag"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="search-overlay" id="searchOverlay"></div>
+    <div class="search-container" id="searchContainer">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <input type="text" id="searchBar" placeholder="&#xF002; Search Products">
     </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="#" id="searchBtn">Search</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+
+    <div class="sub-categories" id="trending-subcategories">
+        <a href="#">Trending Subcategory 1</a>
+        <a href="#">Trending Subcategory 2</a>
+        <a href="#">Trending Subcategory 3</a>
+    </div>
+    <div class="sub-categories" id="tees-subcategories">
+        <a href="#">Tees Subcategory 1</a>
+        <a href="#">Tees Subcategory 2</a>
+        <a href="#">Tees Subcategory 3</a>
+    </div>
+    <div class="sub-categories" id="croptops-subcategories">
+        <a href="#">Croptops Subcategory 1</a>
+        <a href="#">Croptops Subcategory 2</a>
+        <a href="#">Croptops Subcategory 3</a>
+    </div>
+    <div class="sub-categories" id="pants-subcategories">
+        <a href="#">Pants Subcategory 1</a>
+        <a href="#">Pants Subcategory 2</a>
+        <a href="#">Pants Subcategory 3</a>
+    </div>
+    <div class="sub-categories" id="sale-subcategories">
+        <a href="#">Sale Subcategory 1</a>
+        <a href="#">Sale Subcategory 2</a>
+        <a href="#">Sale Subcategory 3</a>
+    </div>
+    <div class="sub-categories" id="create-subcategories">
+        <a href="#">Create* Subcategory 1</a>
+        <a href="#">Create* Subcategory 2</a>
+        <a href="#">Create* Subcategory 3</a>
+    </div>
+    <div class="sub-categories" id="originals-subcategories">
+        <a href="#">Originals Subcategory 1</a>
+        <a href="#">Originals Subcategory 2</a>
+        <a href="#">Originals Subcategory 3</a>
+    </div>
 <div class="search-overlay" id="searchOverlay"></div>
 <div class="search-container" id="searchContainer">
     <span class="close-btn" id="closeBtn">&times;</span>
