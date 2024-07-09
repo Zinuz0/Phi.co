@@ -1,22 +1,36 @@
-window.addEventListener('scroll', function() {
-    var cover = document.getElementById('landing');
-    var header = document.querySelector('header');
-    var scrollPosition = window.scrollY;
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const subCategories = document.querySelectorAll('.sub-categories');
 
-    // Calculate the opacity based on the scroll position
-    var opacity = 1 - (scrollPosition / cover.clientHeight);
+    // Check if we are on the product-details page
+    const isProductDetailsPage = window.location.pathname.includes('product-details.html');
 
-    // Set the opacity of the header
-    header.style.opacity = opacity > 0 ? opacity : 0;
-
-    // Check if cover has scrolled out of view
-    if (scrollPosition >= cover.clientHeight) {
-        // Once the cover section disappears, set the header opacity to 1
-        header.style.opacity = 1;
-
-        // Hide or remove the cover section from the DOM
-        cover.style.display = 'none';
+    if (isProductDetailsPage) {
+        header.style.opacity = '1';
     }
+
+    // Rest of your scroll event listener code
+    window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            header.style.top = '-100px'; // Hide the header
+            header.style.opacity = '0'; // Fade out the header
+            subCategories.forEach(menu => {
+                menu.classList.remove('show'); // Hide subcategory menus
+            });
+        } else {
+            // Scrolling up
+            header.style.top = '0'; // Show the header
+            // Only apply this if it's not the product-details page
+            if (!isProductDetailsPage) {
+                header.style.opacity = '1'; // Fade in the header
+            }
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For mobile or negative scrolling
+    });
 });
 
 document.getElementById('searchBtn').addEventListener('click', function() {
