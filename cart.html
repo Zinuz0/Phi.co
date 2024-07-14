@@ -3,36 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHI - Custom Clothing</title>
+    <title>Your Cart</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Add Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-   <header>
-    <h1>Your Cart</h1>
-    </header>
-    <main>
-        <div class="cart-container">
+    <div class="cart-page">
+        <h1>Your cart</h1>
+        <div class="cart-header">
+            <span>Product</span>
+            <span>Quantity</span>
+            <span>Total</span>
+        </div>
+        <div class="cart-items">
+            <!-- Cart item example -->
             <div class="cart-item">
-                <img src="path-to-product-image.jpg" alt="Product Image">
-                <div class="item-details">
-                    <h2>Product Name</h2>
-                    <p>Product Description</p>
-                    <div class="quantity-control">
-                        <button class="quantity-btn minus">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="quantity-btn plus">+</button>
+                <div class="product-details">
+                    <img src="path/to/product-image.jpg" alt="Product Image">
+                    <div class="product-info">
+                        <h2>NARCISSIST V1-PLAYBOI CARTI</h2>
+                        <p>Rs. 899.00</p>
+                        <p>Size: XS</p>
                     </div>
-                    <p class="item-price">$Price</p>
+                </div>
+                <div class="quantity">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" value="2" min="1">
+                    <button class="quantity-btn plus">+</button>
+                    <button class="remove-item">🗑️</button>
+                </div>
+                <div class="total">
+                    <span>Rs. 1,798.00</span>
                 </div>
             </div>
-            <div class="total-price">
-                <h2>Total: $Total Price</h2>
-            </div>
         </div>
-        <button class="checkout-btn">Proceed to Checkout</button>
-    </main>
+        <div class="cart-summary">
+            <p>Estimated total <span>Rs. 1,798.00</span></p>
+            <p>Tax included and shipping and discounts calculated at checkout</p>
+            <button class="checkout-btn">Check out</button>
+        </div>
+        <a href="index.html" class="continue-shopping">Continue shopping</a>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
