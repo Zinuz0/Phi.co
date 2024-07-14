@@ -542,83 +542,98 @@ a:hover {
   font-size: 14px;
   color: #ccc;
 }
-.cart-container {
+
+.cart-page {
+    width: 80%;
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cart-header, .cart-item, .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-header span, .cart-item div, .cart-summary p {
+    flex: 1;
+    text-align: center;
 }
 
 .cart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
 }
 
-.cart-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 1rem;
-}
-
-.item-details {
-    flex-grow: 1;
-}
-
-.item-details h2 {
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-.item-details p {
-    margin: 0.5rem 0;
-}
-
-.quantity-control {
+.product-details {
     display: flex;
     align-items: center;
 }
 
-.quantity-btn {
-    background-color: #333;
-    color: white;
+.product-details img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+
+.quantity button {
+    background-color: #444;
+    color: #fff;
     border: none;
-    padding: 0.5rem;
+    padding: 5px;
     cursor: pointer;
 }
 
-.quantity-input {
-    width: 40px;
-    text-align: center;
-    margin: 0 0.5rem;
+.quantity .remove-item {
+    margin-left: 10px;
+    background-color: transparent;
+    font-size: 1.2rem;
 }
 
-.item-price {
-    font-size: 1.2rem;
+.cart-summary p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.cart-summary p span {
     font-weight: bold;
 }
 
-.total-price {
-    text-align: right;
-    margin-top: 1rem;
-}
-
 .checkout-btn {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
     border: none;
     cursor: pointer;
-    font-size: 1.2rem;
-    margin-top: 1rem;
 }
 
-.checkout-btn:hover {
-    background-color: #555;
+.continue-shopping {
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
 }
