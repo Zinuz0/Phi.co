@@ -147,99 +147,64 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const cartButton = document.getElementById('cart-button');
-  const cartPage = document.getElementById('cart-page');
-  const cartItemsContainer = document.getElementById('cart-items-container');
-  const cartTotalElement = document.getElementById('cart-total');
-  const continueShoppingButton = document.getElementById('continue-shopping');
+document.addEventListener('DOMContentLoaded', function() {
+    const minusBtns = document.querySelectorAll('.quantity-btn.minus');
+    const plusBtns = document.querySelectorAll('.quantity-btn.plus');
+    const removeBtns = document.querySelectorAll('.remove-item');
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    const continueShoppingBtn = document.querySelector('.continue-shopping');
 
-  cartButton.addEventListener('click', () => {
-    cartPage.classList.toggle('hidden');
-    renderCartItems();
-  });
-
-  continueShoppingButton.addEventListener('click', () => {
-    cartPage.classList.add('hidden');
-  });
-
-  function renderCartItems() {
-    cartItemsContainer.innerHTML = '';
-    let total = 0;
-    cart.forEach(item => {
-      const cartItemElement = document.createElement('div');
-      cartItemElement.classList.add('cart-item');
-      cartItemElement.innerHTML = `
-        <img src="${item.image}" alt="${item.name}">
-        <div class="cart-item-details">
-          <p>${item.name}</p>
-          <p>Rs. ${item.price}</p>
-          <p>Size: ${item.size}</p>
-          <p>Color: ${item.color}</p>
-        </div>
-        <div class="cart-item-controls">
-          <button class="decrease-quantity">-</button>
-          <span>${item.quantity}</span>
-          <button class="increase-quantity">+</button>
-          <button class="remove-item">🗑️</button>
-        </div>
-      `;
-      cartItemsContainer.appendChild(cartItemElement);
-
-      const decreaseButton = cartItemElement.querySelector('.decrease-quantity');
-      const increaseButton = cartItemElement.querySelector('.increase-quantity');
-      const removeButton = cartItemElement.querySelector('.remove-item');
-
-      decreaseButton.addEventListener('click', () => {
-        if (item.quantity > 1) {
-          item.quantity -= 1;
-        } else {
-          cart.splice(cart.indexOf(item), 1);
-        }
-        updateCart();
-      });
-
-      increaseButton.addEventListener('click', () => {
-        item.quantity += 1;
-        updateCart();
-      });
-
-      removeButton.addEventListener('click', () => {
-        cart.splice(cart.indexOf(item), 1);
-        updateCart();
-      });
-
-      total += item.price * item.quantity;
+    minusBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const input = this.nextElementSibling;
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+                updateTotal(this.closest('.cart-item'));
+            }
+        });
     });
 
-    cartTotalElement.textContent = total.toFixed(2);
-  }
+    plusBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const input = this.previousElementSibling;
+            let value = parseInt(input.value);
+            input.value = value + 1;
+            updateTotal(this.closest('.cart-item'));
+        });
+    });
 
-  function updateCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
-    renderCartItems();
-  }
+    removeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const item = this.closest('.cart-item');
+            item.remove();
+            updateGrandTotal();
+        });
+    });
 
-  // Example of adding a product to the cart (replace with your actual product add logic)
-  function addProductToCart(product) {
-    const existingProduct = cart.find(item => item.id === product.id);
-    if (existingProduct) {
-      existingProduct.quantity += 1;
-    } else {
-      cart.push({ ...product, quantity: 1 });
+    checkoutBtn.addEventListener('click', function() {
+        window.location.href = 'checkout.html';
+    });
+
+    continueShoppingBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'index.html';
+    });
+
+    function updateTotal(cartItem) {
+        const price = parseFloat(cartItem.querySelector('.product-info p:nth-child(2)').textContent.replace('Rs. ', ''));
+        const quantity = parseInt(cartItem.querySelector('.quantity input').value);
+        const total = price * quantity;
+        cartItem.querySelector('.total span').textContent = `Rs. ${total.toFixed(2)}`;
+        updateGrandTotal();
     }
-    updateCart();
-  }
 
-  // Example product (this should be triggered by your actual product add logic)
-  const exampleProduct = {
-    id: '1',
-    name: 'WLR-PLAYBOI CARTI',
-    price: 899.00,
-    size: 'XS',
-    color: 'BLACK',
-    image: 'path/to/image.jpg'
-  };
-  addProductToCart(exampleProduct); // Call this when the user adds the product to the cart
+    function updateGrandTotal() {
+        let grandTotal = 0;
+        document.querySelectorAll('.cart-item').forEach(item => {
+            const total = parseFloat(item.querySelector('.total span').textContent.replace('Rs. ', ''));
+            grandTotal += total;
+        });
+        document.querySelector('.cart-summary p span').textContent = `Rs. ${grandTotal.toFixed(2)}`;
+    }
 });
