@@ -544,11 +544,11 @@ a:hover {
 }
 
 .cart-page {
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #222;
+    background-color: #000;
     border-radius: 8px;
 }
 
@@ -571,7 +571,7 @@ h1 {
 
 .cart-item {
     padding: 10px 0;
-    border-bottom: 1px solid #444;
+    border: 1px solid #fff;
 }
 
 .product-details {
@@ -631,9 +631,10 @@ h1 {
     cursor: pointer;
 }
 
-.continue-shopping {
-    display: inline-block;
-    margin-top: 20px;
-    color: #fff;
-    text-decoration: none;
+.continue-shopping-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
 }
