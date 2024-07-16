@@ -176,8 +176,9 @@ header {
 
 /* Header styles for Product Detail page */
 #product-detail-header {
-  opacity: 1; /* Ensure header is visible */
-}
+    background-color: #000; /* Change background color as needed */
+    opacity: 1; /* Ensure header is visible */
+
 
 }
 
