@@ -16,6 +16,12 @@ window.addEventListener('scroll', function() {
 
         // Hide or remove the cover section from the DOM
         cover.style.display = 'none';
+
+        // Set the header position to 0
+        header.style.top = '0';
+    } else {
+        // Set the header position to -100px
+        header.style.top = '-100px';
     }
 });
 
