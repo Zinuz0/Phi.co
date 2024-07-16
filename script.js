@@ -17,11 +17,13 @@ window.addEventListener('scroll', function() {
         // Hide or remove the cover section from the DOM
         cover.style.display = 'none';
 
-        // Set the header position to 0
+        // Set the header position to 0 and enable pointer events
         header.style.top = '0';
+        header.style.pointerEvents = 'auto';
     } else {
-        // Set the header position to -100px
+        // Set the header position to -100px and disable pointer events
         header.style.top = '-100px';
+        header.style.pointerEvents = 'none';
     }
 });
 
