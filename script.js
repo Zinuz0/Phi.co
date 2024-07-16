@@ -27,7 +27,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 const subCategories = document.querySelectorAll('.sub-categories');
