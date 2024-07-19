@@ -1,29 +1,45 @@
-window.addEventListener('scroll', function() {
-    var cover = document.getElementById('landing');
+window.addEventListener('DOMContentLoaded', function() {
     var header = document.querySelector('header');
-    var scrollPosition = window.scrollY;
+    var isProductDetailsPage = window.location.pathname.includes('product-details.html');
 
-    // Calculate the opacity based on the scroll position
-    var opacity = 1 - (scrollPosition / cover.clientHeight);
-
-    // Set the opacity of the header
-    header.style.opacity = opacity > 0 ? opacity : 0;
-
-    // Check if cover has scrolled out of view
-    if (scrollPosition >= cover.clientHeight) {
-        // Once the cover section disappears, set the header opacity to 1
+    if (isProductDetailsPage) {
+        // Make the header opaque and interactive from the beginning for product-details.html
         header.style.opacity = 1;
-
-        // Hide or remove the cover section from the DOM
-        cover.style.display = 'none';
-
-        // Set the header position to 0 and enable pointer events
-        header.style.top = '0';
         header.style.pointerEvents = 'auto';
+        header.style.top = '0';
     } else {
-        // Set the header position to -100px and disable pointer events
+        // Ensure header is hidden and non-interactive initially
         header.style.top = '-100px';
         header.style.pointerEvents = 'none';
+
+        // Apply the scroll behavior for the home page
+        window.addEventListener('scroll', function() {
+            var cover = document.getElementById('landing');
+            var scrollPosition = window.scrollY;
+
+            // Calculate the opacity based on the scroll position
+            var opacity = 1 - (scrollPosition / cover.clientHeight);
+
+            // Set the opacity of the header
+            header.style.opacity = opacity > 0 ? opacity : 0;
+
+            // Check if cover has scrolled out of view
+            if (scrollPosition >= cover.clientHeight) {
+                // Once the cover section disappears, set the header opacity to 1
+                header.style.opacity = 1;
+
+                // Hide or remove the cover section from the DOM
+                cover.style.display = 'none';
+
+                // Set the header position to 0 and enable pointer events
+                header.style.top = '0';
+                header.style.pointerEvents = 'auto';
+            } else {
+                // Set the header position to -100px and disable pointer events
+                header.style.top = '-100px';
+                header.style.pointerEvents = 'none';
+            }
+        });
     }
 });
 
