@@ -30,6 +30,7 @@ header {
     backdrop-filter: blur(15px);
     position: fixed; /* Make the header fixed */
     top: 0;
+    pointer-events: none;
     z-index: 10; /* Ensure header is above other content */
     transition: top 0.3s ease, opacity 0.3s ease; /* Add transition for smooth appearance */
 }
