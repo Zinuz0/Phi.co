@@ -1,9 +1,10 @@
 window.addEventListener('DOMContentLoaded', function() {
     var header = document.querySelector('header');
-    var isProductDetailsPage = window.location.pathname.includes('product-details.html');
+    var path = window.location.pathname;
 
-    if (isProductDetailsPage) {
-        // Make the header opaque and interactive from the beginning for product-details.html
+    // Check if the current page is product-details.html or cart.html
+    if (path.includes('product-details.html') || path.includes('cart.html')) {
+        // Make the header opaque and interactive from the beginning
         header.style.opacity = 1;
         header.style.pointerEvents = 'auto';
         header.style.top = '0';
@@ -12,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
         header.style.top = '-100px';
         header.style.pointerEvents = 'none';
 
-        // Apply the scroll behavior for the home page
+        // Apply the scroll behavior for other pages (e.g., home page)
         window.addEventListener('scroll', function() {
             var cover = document.getElementById('landing');
             var scrollPosition = window.scrollY;
